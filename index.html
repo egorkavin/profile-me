@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Registration form</title>
+</head>
+
+<body>
+    <main class="container">
+        <section class="left-wrapper">
+            <div class="left">
+                <h1 class="left__title">Join the community!</h1>
+                <p class="left__description">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, ducimus? Harum eaque adipisci
+                    at
+                    officiis animi aperiam quos. Quidem dolore temporibus delectus alias quod magnam quasi, officia
+                    ipsam
+                    reprehenderit modi deserunt laudantium harum ducimus nihil facilis assumenda voluptatum itaque velit
+                    culpa voluptate accusamus? Necessitatibus animi similique enim suscipit ullam. In!
+                </p>
+                <p class="left__additonal-info">
+                    At the end of the trial you manually choose whether to subscribe.
+                    You will not be charged automatically.
+                </p>
+            </div>
+        </section>
+        <section class="right-wrapper">
+            <div class="right">
+                <img class="right__icon" src="img/calendar.png" alt="icon">
+                <form class="right__form" action="#">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" autofocus required>
+
+                    <label for="password">Password</label>
+                    <div class="password__input-wrapper">
+                        <button id="toggle-password" type="button">Show</button>
+                        <input type="password" id="password" required>
+                    </div>
+
+                    <label for="fname">Full name</label>
+                    <input type="text" id="fname" class="invalid" required>
+
+                    <div class="birth-date">
+                        <label for="month">Date of birth</label>
+                        <div class="birth-date__date">
+                            <select name="month" id="month" required>
+                                <option value="" disabled selected>Month</option>
+                                <option value="january">January</option>
+                                <option value="february">February</option>
+                                <option value="march">March</option>
+                                <option value="april">April</option>
+                                <option value="may">May</option>
+                                <option value="june">June</option>
+                                <option value="july">July</option>
+                                <option value="august">August</option>
+                                <option value="september">September</option>
+                                <option value="october">October</option>
+                                <option value="november">November</option>
+                                <option value="december">December</option>
+                            </select>
+                            <input type="number" name="day" id="day" placeholder="Day" min="1" max="31">
+                            <input type="number" name="day" id="year" placeholder="Year" min="1900" max="2020">
+                        </div>
+                    </div>
+
+                    <div class="gender">
+                        <label>Gender</label>
+                        <label for="male">
+                            <input type="radio" name="gender" id="male">
+                            <span class="fake-radio"></span>
+                            Male
+                        </label>
+                        <label for="female">
+                            <input type="radio" name="gender" id="female">
+                            <span class="fake-radio"></span>
+                            Female
+                        </label>
+                    </div>
+
+                    <div class="agree">
+                        <label for="agree">
+                            <input type="checkbox" name="agree" id="agree">
+                            <span class="fake-checkbox"></span>
+                            I agree with Terms and Conditions
+                        </label>
+                    </div>
+
+                    <button type="submit" id="submit">Create my account</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

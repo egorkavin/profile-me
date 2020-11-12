@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat';
+  box-sizing: border-box; }
+
+.container {
+  display: flex;
+  min-width: 386px; }
+
+.left-wrapper, .right-wrapper {
+  display: flex;
+  align-items: center;
+  max-width: 50%;
+  width: 100%;
+  height: 100vh; }
+
+.left-wrapper {
+  justify-content: flex-end;
+  position: relative; }
+  .left-wrapper:before, .left-wrapper:after {
+    content: '';
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1; }
+  .left-wrapper:before {
+    background-color: #A85368; }
+  .left-wrapper:after {
+    background-image: url("../img/bg.png");
+    opacity: 0.2; }
+
+.left {
+  width: 400px;
+  margin-right: 64px;
+  text-align: right;
+  color: #FFFFFF; }
+  .left__title {
+    font-weight: bold;
+    font-size: 36px;
+    margin-bottom: 86px; }
+  .left__description {
+    font-size: 18px;
+    margin-bottom: 100px; }
+  .left__additonal-info {
+    font-size: 12px; }
+
+.right-wrapper {
+  justify-content: flex-start; }
+
+.right {
+  color: #555;
+  margin-left: 59px;
+  font-size: 14px; }
+  .right__icon {
+    display: block;
+    margin: 0 auto 20px; }
+  .right__form {
+    max-width: 386px; }
+    .right__form .fake-radio, .right__form .fake-checkbox {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      border: 1px solid #C6C6C6;
+      position: relative; }
+      .right__form .fake-radio:after, .right__form .fake-checkbox:after {
+        opacity: 0;
+        content: '';
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #555;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute; }
+    .right__form label {
+      color: #333; }
+      .right__form label[for="fname"] {
+        display: flex;
+        justify-content: space-between; }
+        .right__form label[for="fname"]:after {
+          display: none;
+          content: 'Please supply a full name';
+          color: #EA4989; }
+        .right__form label[for="fname"].invalid:after {
+          display: inline; }
+        .right__form label[for="fname"].invalid + input {
+          outline-color: #EA4989;
+          border: 2px solid #EA4989; }
+    .right__form input, .right__form select {
+      margin-top: 10px;
+      margin-bottom: 15px; }
+    .right__form input[type="radio"] {
+      display: none; }
+      .right__form input[type="radio"]:checked + .fake-radio:after {
+        opacity: 1; }
+    .right__form input[type="checkbox"] {
+      display: none; }
+      .right__form input[type="checkbox"]:checked + .fake-checkbox:after {
+        opacity: 1; }
+    .right__form input:not([type="radio"]):not([type="checkbox"]) {
+      width: 100%;
+      height: 40px;
+      border: 1px solid #C6C6C6;
+      border-radius: 5px;
+      padding: 0 10px;
+      font-size: 14px; }
+    .right__form input#day {
+      width: 69px;
+      margin-left: 17px; }
+    .right__form input#year {
+      width: 99px;
+      margin-left: 17px; }
+    .right__form input[name="gender"] {
+      margin-right: 10px; }
+    .right__form input#female {
+      margin-left: 35px; }
+    .right__form button[type="submit"] {
+      width: 100%;
+      background: #8889B9;
+      border-radius: 5px;
+      border: none;
+      height: 40px;
+      font-size: 14px;
+      font-weight: 500;
+      color: #fff; }
+
+.password__input-wrapper {
+  position: relative; }
+
+button#toggle-password {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 10px;
+  color: #c6c6c6; }
+  button#toggle-password:focus {
+    outline: none; }
+
+.birth-date__date {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 15px; }
+  .birth-date__date select, .birth-date__date input {
+    margin-top: 0;
+    margin-bottom: 0; }
+  .birth-date__date select#month {
+    max-width: 184px;
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    border: 1px solid #c6c6c6;
+    border-radius: 5px; }
+    .birth-date__date select#month:invalid {
+      color: #A6A6A6; }
+    .birth-date__date select#month option {
+      color: #333; }
+  .birth-date__date input::placeholder {
+    color: #A6A6A6; }
+
+.birth-date__select-month {
+  position: relative; }
+
+.birth-date__select-arrow {
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 40px;
+  top: 10px;
+  right: 0px;
+  border-radius: 5px;
+  border: 1px solid #c6c6c6;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: 0;
+  background-color: #fff;
+  pointer-events: none; }
+
+.gender label {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 10px; }
+  .gender label .fake-radio {
+    margin-right: 14px;
+    border-radius: 50%;
+    cursor: pointer; }
+  .gender label:first-of-type {
+    width: 100%; }
+  .gender label[for="male"] {
+    margin-right: 38px; }
+
+.agree {
+  margin-top: 30px;
+  margin-bottom: 25px; }
+  .agree label {
+    display: inline-flex;
+    align-items: center; }
+    .agree label .fake-checkbox {
+      margin-right: 14px;
+      border-radius: 5px;
+      cursor: pointer; }
+      .agree label .fake-checkbox:after {
+        border-radius: 3px; }
+
+@media (max-width: 1280px) {
+  .left-wrapper, .right-wrapper {
+    justify-content: center;
+    padding: 0 10px; }
+  .left, .right {
+    margin: 0; }
+  .left {
+    text-align: center; }
+    .left__title {
+      font-size: 28px; }
+    .left__description {
+      font-size: 16px; } }
+
+@media (max-width: 768px) {
+  label {
+    font-size: 12px; }
+  .left-wrapper {
+    display: none; }
+  .right-wrapper {
+    max-width: 100%;
+    width: 100%; }
+  .right {
+    margin: 0 auto;
+    padding: 0 10px; }
+  .birth-date__date {
+    flex-wrap: wrap; }
+    .birth-date__date select#month {
+      max-width: 100%;
+      margin-bottom: 23px; }
+    .birth-date__date input#day {
+      max-width: 139px;
+      width: 100%;
+      margin: 0; }
+    .birth-date__date input#year {
+      max-width: 197px;
+      width: 100%;
+      margin-left: 0px; } }
