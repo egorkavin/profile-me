@@ -53,80 +53,80 @@
 .right {
   color: #555;
   margin-left: 59px;
-  font-size: 14px; }
+  font-size: 14px;
+  width: 100%;
+  max-width: 386px; }
   .right__icon {
     display: block;
     margin: 0 auto 20px; }
-  .right__form {
-    max-width: 386px; }
-    .right__form .fake-radio, .right__form .fake-checkbox {
-      display: inline-block;
-      width: 18px;
-      height: 18px;
-      border: 1px solid #C6C6C6;
-      position: relative; }
-      .right__form .fake-radio:after, .right__form .fake-checkbox:after {
-        opacity: 0;
-        content: '';
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background-color: #555;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        position: absolute; }
-    .right__form label {
-      color: #333; }
-      .right__form label[for="fname"] {
-        display: flex;
-        justify-content: space-between; }
-        .right__form label[for="fname"]:after {
-          display: none;
-          content: 'Please supply a full name';
-          color: #EA4989; }
-        .right__form label[for="fname"].invalid:after {
-          display: inline; }
-        .right__form label[for="fname"].invalid + input {
-          outline-color: #EA4989;
-          border: 2px solid #EA4989; }
-    .right__form input, .right__form select {
-      margin-top: 10px;
-      margin-bottom: 15px; }
-    .right__form input[type="radio"] {
-      display: none; }
-      .right__form input[type="radio"]:checked + .fake-radio:after {
-        opacity: 1; }
-    .right__form input[type="checkbox"] {
-      display: none; }
-      .right__form input[type="checkbox"]:checked + .fake-checkbox:after {
-        opacity: 1; }
-    .right__form input:not([type="radio"]):not([type="checkbox"]) {
-      width: 100%;
-      height: 40px;
-      border: 1px solid #C6C6C6;
-      border-radius: 5px;
-      padding: 0 10px;
-      font-size: 14px; }
-    .right__form input#day {
-      width: 69px;
-      margin-left: 17px; }
-    .right__form input#year {
-      width: 99px;
-      margin-left: 17px; }
-    .right__form input[name="gender"] {
-      margin-right: 10px; }
-    .right__form input#female {
-      margin-left: 35px; }
-    .right__form button[type="submit"] {
-      width: 100%;
-      background: #8889B9;
-      border-radius: 5px;
-      border: none;
-      height: 40px;
-      font-size: 14px;
-      font-weight: 500;
-      color: #fff; }
+  .right__form .fake-radio, .right__form .fake-checkbox {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #C6C6C6;
+    position: relative; }
+    .right__form .fake-radio:after, .right__form .fake-checkbox:after {
+      opacity: 0;
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #555;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute; }
+  .right__form label {
+    color: #333; }
+    .right__form label[for="fname"] {
+      display: flex;
+      justify-content: space-between; }
+      .right__form label[for="fname"]:after {
+        display: none;
+        content: 'Please supply a full name';
+        color: #EA4989; }
+      .right__form label[for="fname"].invalid:after {
+        display: inline; }
+      .right__form label[for="fname"].invalid + input {
+        outline-color: #EA4989;
+        border: 2px solid #EA4989; }
+  .right__form input, .right__form select {
+    margin-top: 10px;
+    margin-bottom: 15px; }
+  .right__form input[type="radio"] {
+    display: none; }
+    .right__form input[type="radio"]:checked + .fake-radio:after {
+      opacity: 1; }
+  .right__form input[type="checkbox"] {
+    display: none; }
+    .right__form input[type="checkbox"]:checked + .fake-checkbox:after {
+      opacity: 1; }
+  .right__form input:not([type="radio"]):not([type="checkbox"]) {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #C6C6C6;
+    border-radius: 5px;
+    padding: 0 10px;
+    font-size: 14px; }
+  .right__form input#day {
+    width: 69px;
+    margin-left: 17px; }
+  .right__form input#year {
+    width: 99px;
+    margin-left: 17px; }
+  .right__form input[name="gender"] {
+    margin-right: 10px; }
+  .right__form input#female {
+    margin-left: 35px; }
+  .right__form button[type="submit"] {
+    width: 100%;
+    background: #8889B9;
+    border-radius: 5px;
+    border: none;
+    height: 40px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff; }
 
 .password__input-wrapper {
   position: relative; }
